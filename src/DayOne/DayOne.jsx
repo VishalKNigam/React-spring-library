@@ -12,12 +12,28 @@ const DayOne = () => {
             y:100,
             opacity: 1
         }, 
-        config: 1000
+        config: 10000
+    })
+    const ballStyle = useSpring({
+        from:{
+            width: "200px",
+            height: "200px",
+            backgroundColor: "red",
+            x: 0,
+            borderRadius: "50%",
+        },
+        to:{
+            x: 700
+        },
+        config:30000
     })
     return (
         <div>
             <animated.div style={styles}>
                 Hello, This is the first step!!
+            </animated.div>
+            <animated.div style={ballStyle}>
+
             </animated.div>
         </div>
     )
